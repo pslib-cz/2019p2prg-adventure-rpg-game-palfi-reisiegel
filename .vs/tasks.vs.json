@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "úloha – 2019p2prg-adventure-rpg-game-palfi-reisiegel",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}
