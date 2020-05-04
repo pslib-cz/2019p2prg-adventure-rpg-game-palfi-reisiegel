@@ -9,7 +9,12 @@ namespace Adventure.Pages
 {
     public class StartModel : PageModel
     {
+
         public void OnGet()
+        {
+
+        }
+        public void OnPost()
         {
 
         }
