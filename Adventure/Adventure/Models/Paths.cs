@@ -17,5 +17,6 @@ namespace Adventure.Models
         public string Dascription { get; set; }
         public Areas From { get; set; }
         public Areas To { get; set; }
+        public Func<PlayerStats, bool> Condition { get; set; }
     }
 }

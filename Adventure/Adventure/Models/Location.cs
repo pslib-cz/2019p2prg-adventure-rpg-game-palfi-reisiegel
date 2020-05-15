@@ -7,5 +7,7 @@ namespace Adventure.Models
 {
     public class Location : ILocation
     {
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
-}
+}   

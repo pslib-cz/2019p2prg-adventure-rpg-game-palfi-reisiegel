@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace Adventure.Services
 {
-    public class SessionStorage<T> : ISessionStorage<T>
+    public interface ISessionStorage<T>
     {
+        public T LoadOrCreate{ get; set; }
+        public void Save{ get; set; }
     }
 }

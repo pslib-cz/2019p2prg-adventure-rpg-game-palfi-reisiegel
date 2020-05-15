@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Adventure.Services
+namespace Adventure.Models.Exceptions
 {
-    public class SessionStorage<T> : ISessionStorage<T>
-    {
-    }
+    public class LocationExceptions : Exception { }
+    
+    
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Models
 {
+   
     public enum Areas
     {
         Gate,
@@ -13,4 +14,5 @@ namespace Adventure.Models
         SecondFloor,
         DeathRoom
     }
+    
 }
