@@ -5,5 +5,9 @@
 }
 
 <h1>Start</h1>
-<p>Vstoupil jsi...</p>
-<button type="button" class="btn btn-primary">Jdi sem</button>
+
+@foreach (var a in Model.Paths)
+{
+    <a class="btn btn-primary" asp-page="", asp-route="@a.To">Jdi sem</a>
+}
+

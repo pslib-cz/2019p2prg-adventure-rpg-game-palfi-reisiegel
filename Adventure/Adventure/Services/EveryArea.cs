@@ -1,4 +1,5 @@
 ﻿using Adventure.Models;
+using Adventure.Models.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Services
 {
-    public class EveryArea
+    public class EveryArea : IEveryArea
     {
         private Dictionary<Areas, ILocation> _areas;
         private List<Paths> _paths;
@@ -31,9 +32,37 @@ namespace Adventure.Services
             _paths.Add(new Paths("Go to second floor", Areas.Hall, Areas.SecondFloor));
             _paths.Add(new Paths("Go back", Areas.SecondFloor, Areas.Hall));
             _paths.Add(new Paths("Go to dining room", Areas.SecondFloor, Areas.DeathRoom));
-            
 
+           
 
+        }
+        public bool ExistsLocation(Areas id)
+        {
+            return _areas.ContainsKey(id);
+        }
+        public List<Paths> GetPathsFrom(Areas id)
+        {
+            if (ExistsLocation(id))
+            {
+                return _paths.Where(m => m.From == id).ToList();
+            }
+            throw new LocationExceptions();
+        }
+        public List<Paths> GetPathsTo(Areas id)
+        {
+            throw new NotImplementedException();
+        }
+        public Location GetLocation(Areas id)
+        {
+            if (ExistsLocation(id))
+            {
+                return (Location)_areas[id];
+            }
+            throw new LocationExceptions();
+        }
+        public bool Navigation(Areas from, Areas to, PlayerStats state)
+        {
+            throw new NotImplementedException();
         }
     }
 }

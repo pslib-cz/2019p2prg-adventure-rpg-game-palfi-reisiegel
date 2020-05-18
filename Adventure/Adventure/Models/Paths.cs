@@ -7,14 +7,14 @@ namespace Adventure.Models
 {
     public class Paths
     {
-        public Paths(string dascription, Areas from, Areas to)
+        public Paths(string description, Areas from, Areas to)
         {
-            Dascription = dascription;
+            Description = description;
             From = from;
             To = to;
         }
 
-        public string Dascription { get; set; }
+        public string Description { get; set; }
         public Areas From { get; set; }
         public Areas To { get; set; }
         public Func<PlayerStats, bool> Condition { get; set; }

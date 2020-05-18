@@ -29,8 +29,8 @@ namespace Adventure
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddScoped<ISessionStorage<PlayerStats>, SessionStorage<PlayerStats>>();
-            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped< IEveryArea,EveryArea>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IEveryArea, EveryArea>();
             services.AddScoped<GameService>();
             services.AddRazorPages();
         }
@@ -55,6 +55,7 @@ namespace Adventure
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

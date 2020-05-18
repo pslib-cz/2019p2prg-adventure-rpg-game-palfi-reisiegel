@@ -332,3 +332,6 @@ D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\net
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.dll
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.pdb
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.genruntimeconfig.cache
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\bin\Debug\netcoreapp3.1\Utf8Json.dll
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.csproj.CoreCompileInputs.cache
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.MvcApplicationPartsAssemblyInfo.cache

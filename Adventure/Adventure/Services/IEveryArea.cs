@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Services
 {
-    interface IEveryArea
+    public interface IEveryArea
     {
         bool ExistsLocation(Areas id);
         Location GetLocation(Areas id);
