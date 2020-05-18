@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Services
 {
-    public interface ISessionStorage<T>
+    public class GameService
     {
-        public T LoadOrCreate(string key);
-        public void Save(string key, T data);
     }
 }

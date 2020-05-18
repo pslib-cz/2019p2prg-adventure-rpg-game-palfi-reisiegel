@@ -7,6 +7,6 @@ namespace Adventure.Models
 {
     public interface ILocation
     {
-        string Description { get; }
+        string Description { get; set; }
     }
 }

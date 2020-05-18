@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Adventure.Models;
+using Adventure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -26,9 +28,10 @@ namespace Adventure
         {
             services.AddDistributedMemoryCache();
             services.AddSession();
-
+            services.AddScoped<ISessionStorage<PlayerStats>, SessionStorage<PlayerStats>>();
             services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<Services.SessionStorage>();
+            services.AddScoped< IEveryArea,EveryArea>();
+            services.AddScoped<GameService>();
             services.AddRazorPages();
         }
 

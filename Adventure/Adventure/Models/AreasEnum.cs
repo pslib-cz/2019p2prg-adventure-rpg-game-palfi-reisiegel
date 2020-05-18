@@ -9,6 +9,7 @@ namespace Adventure.Models
     public enum Areas
     {
         Gate,
+        Hall,
         DiningRoom,
         ThroneRoom,
         SecondFloor,
