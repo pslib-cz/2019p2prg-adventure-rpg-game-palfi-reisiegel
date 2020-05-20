@@ -9,6 +9,7 @@ namespace Adventure.Models
     {
         public int Money { get; set; }
         public int HP { get; set; }
+        public int MP { get; set; }
         public Areas Location { get; set; }
     }
 }

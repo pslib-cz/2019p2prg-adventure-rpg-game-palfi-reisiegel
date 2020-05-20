@@ -12,6 +12,7 @@ namespace Adventure.Services
         private readonly IEveryArea _ea;
         private const string KEY = "SECRETCASTLEADVENTURE";
         private const Areas START_GATE = Areas.Gate;
+        private const Areas YOUR_END = Areas.TheEnd;
         public PlayerStats State { get; private set; }
         public Location Location { get { return _ea.GetLocation(State.Location); } }
         public List<Paths> Paths { get { return _ea.GetPathsFrom(State.Location); } }
@@ -24,16 +25,38 @@ namespace Adventure.Services
         }
         public void Start()
         {
-            State = new PlayerStats { HP = 7, Location = START_GATE, Money = 200 };
-        }
+            State = new PlayerStats { HP = 100, MP = 100, Money = 50, Location = START_GATE };
+            if (State.HP <= 0)
+            {
+                State.Location = YOUR_END;
+            }
 
+        }
+        public void DamageAreas()
+        {
+            
+         
+            _sv.Save(KEY, State);
+
+
+        }
         public void FetchData()
         {
             State = _sv.LoadOrCreate(KEY);
         }
         public void Store()
         {
+            if (State.Location == Areas.DeathRoom)
+            {
+                State.HP -= 4;
+            }
+            if(State.HP <= 0)
+            {
+                State.Location = YOUR_END;
+            }
             _sv.Save(KEY, State);
+            
+
         }
 
 

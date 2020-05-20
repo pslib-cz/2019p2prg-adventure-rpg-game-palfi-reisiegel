@@ -9,32 +9,31 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Adventure.Pages
 {
-    public class StartModel : PageModel
+    public class RoomsModel : PageModel
     {
         private GameService _sv;
         public PlayerStats Player { get; set; }
         public Location Location { get; set; }
-
+        
         public List<Paths> Paths { get; set; }
-        public StartModel(GameService sv)
+        public RoomsModel(GameService sv)
         {
             _sv = sv;
-
         }
 
-        public void OnGet()
+        public void OnGet(Areas id)
         {
-            
-            
-            _sv.Start();
-            Paths = _sv.Paths;
-            Location = _sv.Location;
-            Player = _sv.State;
+            _sv.FetchData();
+            _sv.State.Location = id;
+
             _sv.Store();
+            Location = _sv.Location;
+            Paths = _sv.Paths;
             Player = _sv.State;
             _sv.DamageAreas();
             
+            
         }
-        
+      
     }
 }

@@ -1,0 +1,28 @@
+﻿@page
+@model Adventure.Pages.RoomsModel
+@using Adventure.Models
+@{
+    ViewData["Title"] = "Rooms";
+}
+
+<h1>@Model.Location.Title</h1>
+<p>@Model.Location.Description</p>
+<div>
+    @foreach (var a in Model.Paths)
+    {
+
+        if (a.To == Areas.Gate)
+        {
+            <a class="btn btn-primary" asp-page="Start" , asp-route-id="@a.To">@a.Description</a>
+        }
+        else
+        {
+            <a class="btn btn-primary" asp-page="Rooms" , asp-route-id="@a.To">@a.Description</a>
+        }
+    }
+</div>
+<div>
+    <span>HP: @Model.Player.HP</span>
+    <span>MP: @Model.Player.MP</span>
+    <span>Money: @Model.Player.Money</span>
+</div>

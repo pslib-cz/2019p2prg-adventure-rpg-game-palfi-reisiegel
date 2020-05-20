@@ -335,3 +335,4 @@ D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\net
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\bin\Debug\netcoreapp3.1\Utf8Json.dll
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.csproj.CoreCompileInputs.cache
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.MvcApplicationPartsAssemblyInfo.cache
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms.cshtml.g.cs

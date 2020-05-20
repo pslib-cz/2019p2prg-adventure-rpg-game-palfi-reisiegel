@@ -7,7 +7,7 @@ namespace Adventure.Models
 {
     public class Paths
     {
-        public Paths(string description, Areas from, Areas to)
+        public Paths(string description, Areas from, Areas to, Func<PlayerStats, bool> condition = null)
         {
             Description = description;
             From = from;

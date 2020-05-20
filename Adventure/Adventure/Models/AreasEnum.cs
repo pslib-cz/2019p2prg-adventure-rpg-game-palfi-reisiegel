@@ -13,7 +13,8 @@ namespace Adventure.Models
         DiningRoom,
         ThroneRoom,
         SecondFloor,
-        DeathRoom
+        DeathRoom,
+        TheEnd
     }
     
 }
