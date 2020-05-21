@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="Helpers\SessionHelper.cs~RF596004ab.TMP" />
+    <None Remove="Models\NewFile.txt" />
+    <None Remove="Pages\NewFile.txt" />
   </ItemGroup>
 
   <ItemGroup>

@@ -18,14 +18,19 @@ namespace Adventure.Models
         Betroom, //bedroom go back, take the crown, key
         Kitchen,
         Elevator,
+        SendFood,
         DeathRoom,
+        DeathRoom2,
+        DeathRoom3,
         Tower,
 
+        AlmostEmptyRoom,
+        SecretChamber,
 
         Cellar,
         Cell,
         Skeleton,
-        SecretChamber,
+        
         Door,
 
         TheEnd
