@@ -26,7 +26,7 @@ namespace Adventure.Pages
         public void OnGet()
         {
             Property.RandComputerNumber = _random.Next(1, 100);
-            Property.Message = "Vítejte ve hře hádání čísla. Prosím zadejte číslo";
+            Property.Message = "You have to guess a number…";
 
 
         }

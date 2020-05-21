@@ -11,6 +11,7 @@ namespace Adventure.Services.SideGamesServices
     public class RPSService
     {
         
+        
         public void RPSGame(RPSEnum player, RPSEnum computer, int wins, int lose)
         { 
             if (player != computer)

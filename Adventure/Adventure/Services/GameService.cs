@@ -42,9 +42,14 @@ namespace Adventure.Services
         }
         public void Store()
         {
-            if (State.Location == Areas.DeathRoom)
+            if (State.Location == Areas.DeathRoom || State.Location == Areas.DeathRoom2 || State.Location == Areas.DeathRoom3)
             {
                 State.HP -= 20;
+                
+            }
+            if (State.Location == Areas.Cellar)
+            {
+                State.HP -= 30;
             }
             if (State.Location == Areas.DiningRoom)
             {
@@ -54,6 +59,16 @@ namespace Adventure.Services
             {
                 State.Location = YOUR_END;
                 State.HP = 0;
+            }
+            if(State.Location == Areas.FalseAnswer)
+            {
+                State.HP -= 5;
+                State.MP -= 20;
+                State.Money -= 5;
+            }
+            if(State.Location == Areas.BedTime)
+            {
+                State.MP += 10;
             }
             if(State.HP <= 0)
             {

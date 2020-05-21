@@ -15,14 +15,17 @@ namespace Adventure.Models
 
         SecondFloor,
         Floor,
-        Betroom, //bedroom go back, take the crown, key
+        Betroom,
+        Tower,
+        BedTime,
+        Takecrown,
         Kitchen,
         Elevator,
         SendFood,
         DeathRoom,
         DeathRoom2,
         DeathRoom3,
-        Tower,
+        
 
         AlmostEmptyRoom,
 

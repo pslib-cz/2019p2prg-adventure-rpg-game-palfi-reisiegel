@@ -13,6 +13,7 @@ namespace Adventure.Pages
     {
         [BindProperty]
         public RPSData Data { get; set; } = new RPSData();
+        public RPSService serv { get; set; }
 
         private RPSService _sv;
         private Random _random;
@@ -32,7 +33,8 @@ namespace Adventure.Pages
             {
                 Data.Computer = (RPSEnum)_random.Next(1, 4);
                 //napiš Data.něco = *zbytek*
-               _sv.RPSGame(Data.Player, Data.Computer, Data.Wins, Data.Lose);
+                _sv.RPSGame(Data.Player, Data.Computer, Data.Wins++, Data.Lose++);
+                
             }
             if (Data.Won == true)
             {

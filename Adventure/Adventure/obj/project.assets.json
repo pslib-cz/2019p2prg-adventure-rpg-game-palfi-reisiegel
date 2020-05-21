@@ -2805,12 +2805,11 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
+      "sha512": "/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -2833,12 +2832,11 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -6158,19 +6156,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jan\\.nuget\\packages\\": {}
+    "C:\\Users\\Vlastik\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\Adventure.csproj",
+      "projectUniqueName": "C:\\Users\\Vlastik\\source\\repos\\Very Very Adventure\\Adventure\\Adventure\\Adventure.csproj",
       "projectName": "Adventure",
-      "projectPath": "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\Adventure.csproj",
-      "packagesPath": "C:\\Users\\jan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\obj\\",
+      "projectPath": "C:\\Users\\Vlastik\\source\\repos\\Very Very Adventure\\Adventure\\Adventure\\Adventure.csproj",
+      "packagesPath": "C:\\Users\\Vlastik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vlastik\\source\\repos\\Very Very Adventure\\Adventure\\Adventure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\jan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vlastik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6221,7 +6223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
