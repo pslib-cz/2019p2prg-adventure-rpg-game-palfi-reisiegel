@@ -26,14 +26,14 @@ namespace Adventure.Services.SideGamesServices
                 }
 
                 if (
-                   (player != RPSEnum.Rock && computer != RPSEnum.Scissors) ||
-                   (player != RPSEnum.Scissors && computer != RPSEnum.Paper) ||
-                   (player != RPSEnum.Paper && computer != RPSEnum.Rock)
+                   (computer == RPSEnum.Rock && player == RPSEnum.Scissors) ||
+                   (computer == RPSEnum.Scissors && player == RPSEnum.Paper) ||
+                   (computer == RPSEnum.Paper && player == RPSEnum.Rock)
                   )
                 {
 
                     
-                    lose++;//
+                    lose++;
                 }
             }
             if (wins == 3)

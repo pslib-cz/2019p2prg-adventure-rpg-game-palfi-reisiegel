@@ -3,20 +3,40 @@
 @{
     ViewData["Title"] = "Start";
 }
-
-<h1>@Model.Location.Title</h1>
-<p>@Model.Location.Description</p>
-<div>
-    @foreach (var a in Model.Paths)
-    {
-        <a class="btn btn-primary" asp-page="Rooms" , asp-route-id="@a.To">@a.Description</a>
-    }
-</div>
-<div>
-    <span>HP: @Model.Player.HP</span>
-    <span>MP: @Model.Player.MP</span>
-    <span>Money: @Model.Player.Money</span>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>@Model.Location.Title</h1>
+                <p>@Model.Location.Description</p>
+                <div class="d-flex flex-column">
+                    @foreach (var a in Model.Paths)
+                    {
+                    <a class="btn btn-primary" asp-page="Rooms" , asp-route-id="@a.To">@a.Description</a>
+                    }
+                </div>
+            </div>
+            <div class="col">
+                <div class="container">
+                    <div class="row">
+                        <img src="~/img/image374.png" alt="váš obrázek" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="alert alert-danger text-center">HP: @Model.Player.HP</div>
+                                </div>
+                                <div class="col">
+                                    <div class="alert alert-primary text-center">MP: @Model.Player.MP</div>
+                                </div>
+                                <div class="col">
+                                    <div class="alert alert-warning text-center">Money: @Model.Player.Money</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-</div>
 
 

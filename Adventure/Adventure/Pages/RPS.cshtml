@@ -27,7 +27,18 @@
             <input class="form-check-input" type="radio" asp-for="@Model.Data.Player" value="@RPSEnum.Paper">
             <label class="form-check-label" asp-for="@Model.Data.Player">Papír</label>
         </div>
-        <button type="submit" class="btn btn-dark">Play</button>
+        @if (Model.Data.Lose == 3 || Model.Data.Wins == 3)
+        {
+            @foreach (var a in Model.Paths)
+            {
+                <a class="btn btn-primary" asp-page="Rooms" , asp-route-id="@a.To">@a.Description</a>
+            }
+        }
+        else
+        {
+            <button type="submit" class="btn btn-dark">Play</button>
+        }
+
     </form>
 </div>
 

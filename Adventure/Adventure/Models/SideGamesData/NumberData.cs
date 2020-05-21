@@ -12,7 +12,6 @@ namespace Adventure.Models.SideGamesData
         [Required]
         public int PlayerNumber { get; set; }
         public int RandComputerNumber { get; set; }
-
         public string Message { get; set; }
         public int Guesses { get; set; }
         public NumberEnum Result { get; set; } = 0;

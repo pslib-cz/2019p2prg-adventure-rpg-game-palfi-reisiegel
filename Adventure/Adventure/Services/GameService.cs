@@ -66,9 +66,17 @@ namespace Adventure.Services
                 State.MP -= 20;
                 State.Money -= 5;
             }
-            if(State.Location == Areas.BedTime)
+            if (State.Location == Areas.BedTime)
             {
                 State.MP += 10;
+            }
+            if(State.MP <= 0)
+            {
+                State.Location = Areas.Exhaustion;
+            }
+            if (State.Money <= 0)
+            {
+                State.Location = Areas.Poor;
             }
             if(State.HP <= 0)
             {

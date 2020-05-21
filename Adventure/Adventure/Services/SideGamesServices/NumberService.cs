@@ -13,13 +13,23 @@ namespace Adventure.Services.SideGamesServices
         public NumberData Data { get; set; } = new NumberData();
         public NumberEnum Guessing(int number, int random)
         {
-            if (number == random)
+            if (number < random)
             {
-
-                return NumberEnum.Success;
+                return NumberEnum.IsLower;
+            }
+            if (number > random)
+            {
+                return NumberEnum.IsGreater;
 
             }
-            return NumberEnum.None;
+            if (number == random)
+            {
+                return NumberEnum.Success;
+            }
+            else
+            {
+                return NumberEnum.None;
+            }
         }
     }
 }

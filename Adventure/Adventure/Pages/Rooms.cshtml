@@ -5,32 +5,52 @@
     ViewData["Title"] = "Rooms";
 }
 
-<h1>@Model.Location.Title</h1>
-<p>@Model.Location.Description</p>
-<div>
-    @foreach (var a in Model.Paths)
-    {
 
-        if (a.To == Areas.Gate)
-        {
-            <a class="btn btn-primary" asp-page="Start" , asp-route-id="@a.To">@a.Description</a>
-        }
-        else
-        {
-            <a class="btn btn-primary" asp-page="Rooms" , asp-route-id="@a.To">@a.Description</a>
-        }
-    }
-    @if (Model.Location.Title == "King")
-    {
-        <a class="btn btn-primary" asp-page="GuessNumber">Accept</a>
-    }
-    @if (Model.Location.Title == "Bedroom with bets and debts")
-    {
-        <a class="btn btn-primary" asp-page="RPS">Play game for money!</a>
-    }
-</div>
-<div>
-    <span>HP: @Model.Player.HP</span>
-    <span>MP: @Model.Player.MP</span>
-    <span>Money: @Model.Player.Money</span>
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <div>
+            <h1 class="text-center">@Model.Location.Title</h1>
+            <p class="text-justify">@Model.Location.Description</p>
+            <div class="d-flex flex-column">
+                    @foreach (var a in Model.Paths)
+                    {
+
+                        if (a.To == Areas.Gate)
+                        {
+                        <a class="btn btn-primary" asp-page="Start" , asp-route-id="@a.To">@a.Description</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-primary" asp-page="Rooms" , asp-route-id="@a.To">@a.Description</a>
+                        }
+                    }
+                    @if (Model.Location.Title == "King")
+                    {
+                        <a class="btn btn-primary" asp-page="GuessNumber">Accept</a>
+                    }
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="container">
+            <div class="row">
+                <img src="~/img/image374.png" alt="váš obrázek" />
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-danger text-center">HP: @Model.Player.HP</div>
+                        </div>
+                        <div class="col">
+                            <div class="alert alert-primary text-center">MP: @Model.Player.MP</div>
+                        </div>
+                        <div class="col">
+                            <div class="alert alert-warning text-center">Money: @Model.Player.Money</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>

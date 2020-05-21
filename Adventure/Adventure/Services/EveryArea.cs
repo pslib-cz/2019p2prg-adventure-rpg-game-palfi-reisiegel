@@ -30,7 +30,8 @@ namespace Adventure.Services
             _areas.Add(Areas.Betroom, new Location { Title = "Bedroom with bets and debts", Description = "Betroom because this is where king sleeps and maked bets, obviously. Other than that, there's his crown, that he somehow forgot, even his key is here. You even notice a ladder which goes to up on the roof of the tower." });
             _areas.Add(Areas.BedTime, new Location { Title = "Sleeping", Description = "You went to sleep. It was a really comfortable bed, but you feel guilty, that you slept in someone else's bed." });
             _areas.Add(Areas.Tower, new Location { Title = "Tower", Description = "You will just die, there's no comeback, and the TV you brought is useless." });
-         
+            
+
             //Kitchen
             _areas.Add(Areas.Kitchen, new Location { Title = "Kitchen", Description = "You went into the kitchen of this castle, you think about, how do they bring their food on the table in the dining room, then you notice that they have their own elevator, which leads to first floor in dining room." });
             _areas.Add(Areas.Elevator, new Location { Title = "Elevator", Description = "You can send yout some food, or yourself" });
@@ -44,6 +45,9 @@ namespace Adventure.Services
             _areas.Add(Areas.AlmostEmptyRoom, new Location { Title = "Empty", Description = "This room is rather empty, pretty suspicious for a big castle. Only thing, that really catched you eye is pretty big hole in the center of the room." });
             _areas.Add(Areas.Cellar, new Location { Title = "Cellar", Description = "Congratulations, you're in… cellar. But dont worry, you can escape, but you hear some rattle from the cellar. You should investigate, or not. Your choice" });
             _areas.Add(Areas.Cell, new Location { Title = "Cell", Description = "You've approched a cell, what will you do?" });
+            _areas.Add(Areas.Skeleton, new Location { Title = "Skeldo", Description = "Ahhh how are ya doin' matey! Where ya portin' stranger?" });
+            _areas.Add(Areas.Skeleton1, new Location { Title = "Skeldo", Description = "Who am I? I should say who are YOU? I'm just a local skeleton who likes to help!" });
+
             _areas.Add(Areas.Door, new Location { Title = "Door", Description = "You've opened the door and realised, it goes back to the hall!" });
             _areas.Add(Areas.SecretChamber, new Location { Title = "??", Description = "How many rooms you needed to get here? (hint: from gate to here)" });
             _areas.Add(Areas.FalseAnswer, new Location { Title = "You Failed", Description = "That was a wrong answer." });
@@ -73,9 +77,6 @@ namespace Adventure.Services
             _paths.Add(new Paths("Go back", Areas.Betroom, Areas.SecondFloor));
             _paths.Add(new Paths("Go back",Areas.BedTime, Areas.Betroom));
             _paths.Add(new Paths("Go to sleep", Areas.Betroom, Areas.BedTime));
-            
-           
-
 
             _paths.Add(new Paths("Climb the ladder", Areas.Betroom, Areas.Tower));
             _paths.Add(new Paths("Die", Areas.Tower, Areas.TheEnd));
@@ -110,11 +111,22 @@ namespace Adventure.Services
             _paths.Add(new Paths("Go back", Areas.Cell, Areas.Cellar));
             _paths.Add(new Paths("Knock on the cell", Areas.Cell, Areas.Skeleton));
 
+            _paths.Add(new Paths("Go back", Areas.Skeleton, Areas.Cellar));
+            _paths.Add(new Paths("Go back", Areas.Skeleton1, Areas.Skeleton));
+            _paths.Add(new Paths("Who are you?", Areas.Skeleton, Areas.Skeleton1));
+            _paths.Add(new Paths("Port to Second floor", Areas.Skeleton, Areas.SecondFloor));
+            _paths.Add(new Paths("Port to Empty room", Areas.Skeleton, Areas.AlmostEmptyRoom));
+            _paths.Add(new Paths("Port to Kitchen", Areas.Skeleton, Areas.Kitchen));
+
             //Your Death
             _areas.Add(Areas.TheEnd, new Location { Title = "The End", Description = "This is where it ends for you…" });
-            _paths.Add(new Paths("Start again", Areas.TheEnd, Areas.Gate)); //, (h) => { if (h.HP > 0) { return false; } else { return true; } }
-
-
+            _paths.Add(new Paths("Start again", Areas.TheEnd, Areas.Gate));
+            //Exhaustion
+            _areas.Add(Areas.Exhaustion, new Location { Title = "The End", Description = "You died of exhaustion" });
+            _paths.Add(new Paths("Start again", Areas.Exhaustion, Areas.Gate));
+            //Poor
+            _areas.Add(Areas.Poor, new Location { Title = "The End", Description = "You don't have any money. You're literally broke. You can't buy anything." });
+            _paths.Add(new Paths("Start again", Areas.Poor, Areas.Gate));
 
         }
         public bool ExistsLocation(Areas id)

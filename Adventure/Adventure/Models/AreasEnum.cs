@@ -15,10 +15,12 @@ namespace Adventure.Models
 
         SecondFloor,
         Floor,
+        //RPS,
         Betroom,
         Tower,
         BedTime,
-        Takecrown,
+        
+        
         Kitchen,
         Elevator,
         SendFood,
@@ -39,10 +41,13 @@ namespace Adventure.Models
         Cellar,
         Cell,
         Skeleton,
+        Skeleton1,
         
         Door,
 
-        TheEnd
+        TheEnd,
+        Poor,
+        Exhaustion
     }
     
 }
