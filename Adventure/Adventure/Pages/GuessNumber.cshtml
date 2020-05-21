@@ -1,0 +1,32 @@
+﻿@page
+@model Adventure.Pages.GuessNumberModel
+@{
+    ViewData["Title"] = "GuessNumber";
+}
+
+    <div class="container">
+        <h1 class="display-4">Vítejte</h1>
+        <div>
+
+            <p>@Model.Property.Message</p>
+            <!---<p>Nacházeč: @Model.Property.Result</p>--->
+
+        </div>
+        <form method="post">
+            <div class="row">
+                <div class="col-4">
+                    <input type="hidden" asp-for="@Model.Property.RandComputerNumber" value="@Model.Property.RandComputerNumber">
+                    <input type="hidden" asp-for="@Model.Property.Guesses" value="@Model.Property.Guesses">
+                    <label for="inputPassword2" class="sr-only">Zadej něco</label>
+                    <input type="number" class="mb-1 form-control" id="inputPassword2" min="1" max="100" placeholder="Zadej číslo" asp-for="@Model.Property.PlayerNumber">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Vložit</button>
+            <div>
+                <div class="alert alert-warning" role="alert">
+                    Počet pokusů pro uhádnutí: @Model.Property.Guesses
+                </div>
+            </div>
+        </form>
+    </div>
+

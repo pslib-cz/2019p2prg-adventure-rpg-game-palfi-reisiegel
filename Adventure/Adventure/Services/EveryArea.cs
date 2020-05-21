@@ -38,9 +38,14 @@ namespace Adventure.Services
             _areas.Add(Areas.DeathRoom3, new Location { Title = "Death room", Description = "Your only option was break through the door. Which was succesful, maybe you're really hurt, but you got throught that, and of course, there's no turning back. Or is it?" });
 
             _areas.Add(Areas.AlmostEmptyRoom, new Location { Title = "Empty", Description = "This room is rather empty, pretty suspicious for a big castle. Only thing, that really catched you eye is pretty big hole in the center of the room." });
-            _areas.Add(Areas.SecretChamber, new Location { Title = "??", Description = "How many rooms you needed to get here? (hint: from gate to here)" });
             _areas.Add(Areas.Cellar, new Location { Title = "Cellar", Description = "Congratulations, you're in… cellar. But dont worry, you can escape, but you hear some rattle from the cellar. You should investigate, or not. Your choice" });
             _areas.Add(Areas.Cell, new Location { Title = "Cell", Description = "You've approched a cell, what will you do?" });
+            _areas.Add(Areas.Door, new Location { Title = "Door", Description = "You've opened the door and realised, it goes back to the hall!" });
+            _areas.Add(Areas.SecretChamber, new Location { Title = "??", Description = "How many rooms you needed to get here? (hint: from gate to here)" });
+            _areas.Add(Areas.SecretChamber2, new Location { Title = "Secret Chamber", Description = "Tadadada! You have found a Secret Chamber! But the doors closed so… you have to move forward…" });
+            _areas.Add(Areas.SecretChamber3, new Location { Title = "Secret Chamber", Description = "When you're going through the Chamber, you see a man, who has a really nice robe and decorated with jewelry, such as bracelets, rings, shiny necklace and even earrings. It was a king himself, but without a crown. He noticed you and started to speak to you." });
+            _areas.Add(Areas.King, new Location { Title = "King", Description = "Welcome to this magnificent chamber, which was bult when the castle was still under construction, which no one knew about it, only the very people who bult it. The rumors said, the chamber doesn't exist, but as you can see the opposite is true. That what lies before you is a magical item, which a mere human cannot access. Only with a ritual, that old ones called RPS, is the only thing that we can do. Please play the os called 'Game' with me." });
+            _areas.Add(Areas.TheNormalEnd, new Location { Title = "Wins?", Description = "You left, you had enough of this. Why? I don't know it was you decision to go back and left a castle. What's the reason? Your reason, which I don't know…" });
 
             _paths.Add(new Paths("Proceed", Areas.Gate, Areas.Hall));
 
@@ -60,7 +65,8 @@ namespace Adventure.Services
             _paths.Add(new Paths("Go back", Areas.SendFood, Areas.Elevator));
             _paths.Add(new Paths("Go into the Betroom", Areas.SecondFloor, Areas.Betroom));
             _paths.Add(new Paths("Go back", Areas.Betroom, Areas.SecondFloor));
-
+            _paths.Add(new Paths("Climb the ladder", Areas.Betroom, Areas.Tower));
+            _paths.Add(new Paths("Die", Areas.Tower, Areas.TheEnd));
 
             _paths.Add(new Paths("Go into the death room", Areas.SecondFloor, Areas.DeathRoom));
             _paths.Add(new Paths("Open the door", Areas.DeathRoom, Areas.DeathRoom2));
@@ -70,9 +76,24 @@ namespace Adventure.Services
             _paths.Add(new Paths("Fall into the hole", Areas.AlmostEmptyRoom, Areas.Cellar));
             _paths.Add(new Paths("___", Areas.AlmostEmptyRoom, Areas.SecretChamber));
 
+            _paths.Add(new Paths("2", Areas.SecretChamber, Areas.FalseAnswer));
+            _paths.Add(new Paths("4", Areas.SecretChamber, Areas.SecretChamber2));
+            _paths.Add(new Paths("10", Areas.SecretChamber, Areas.FalseAnswer));
+            _paths.Add(new Paths("6", Areas.SecretChamber, Areas.FalseAnswer));
+            _paths.Add(new Paths("7", Areas.SecretChamber, Areas.FalseAnswer));
+
+            
+
+
+            _paths.Add(new Paths("Continue", Areas.SecretChamber2, Areas.King));
+            _paths.Add(new Paths("Refuse", Areas.SecretChamber2, Areas.TheNormalEnd));
+            _paths.Add(new Paths("Start again…", Areas.TheNormalEnd, Areas.Gate));
+
             _paths.Add(new Paths("Approach cell", Areas.Cellar, Areas.Cell));
             _paths.Add(new Paths("Go throught the door", Areas.Cellar, Areas.Door));
+            _paths.Add(new Paths("Continue", Areas.Door, Areas.Hall));
             _paths.Add(new Paths("Go back", Areas.Cell, Areas.Cellar));
+            _paths.Add(new Paths("Knock on the cell", Areas.Cell, Areas.Skeleton));
 
             //Your Death
             _areas.Add(Areas.TheEnd, new Location { Title = "The End", Description = "This is where it ends for you…" });

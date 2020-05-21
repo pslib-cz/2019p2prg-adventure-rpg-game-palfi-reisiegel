@@ -26,10 +26,6 @@ namespace Adventure.Services
         public void Start()
         {
             State = new PlayerStats { HP = 100, MP = 100, Money = 50, Location = START_GATE };
-            if (State.HP <= 0)
-            {
-                State.Location = YOUR_END;
-            }
 
         }
         public void DamageAreas()
@@ -50,19 +46,21 @@ namespace Adventure.Services
             {
                 State.HP -= 20;
             }
-            if (State.Location == Areas.Tower)
-            {
-                State.HP = 0;
-            }
             if (State.Location == Areas.DiningRoom)
             {
                 State.HP += 10;
             }
-            
+            if(State.Location == Areas.TheEnd)
+            {
+                State.Location = YOUR_END;
+                State.HP = 0;
+            }
             if(State.HP <= 0)
             {
                 State.Location = YOUR_END;
+                State.HP = 0;
             }
+            
             _sv.Save(KEY, State);
             
 

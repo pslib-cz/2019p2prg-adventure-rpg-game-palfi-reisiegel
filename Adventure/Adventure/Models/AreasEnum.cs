@@ -25,7 +25,13 @@ namespace Adventure.Models
         Tower,
 
         AlmostEmptyRoom,
+
         SecretChamber,
+        FalseAnswer,
+        SecretChamber2,
+        SecretChamber3,
+        King,
+        TheNormalEnd,
 
         Cellar,
         Cell,

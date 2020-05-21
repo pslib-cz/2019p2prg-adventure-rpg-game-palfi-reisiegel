@@ -336,3 +336,8 @@ D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\bin\Debug\net
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.csproj.CoreCompileInputs.cache
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.MvcApplicationPartsAssemblyInfo.cache
 D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms.cshtml.g.cs
+C:\Users\jan\Source\Repos\2019p2prg-adventure-rpg-game-palfi-reisiegel\Adventure\Adventure\bin\Debug\netcoreapp3.1\Utf8Json.dll
+C:\Users\jan\Source\Repos\2019p2prg-adventure-rpg-game-palfi-reisiegel\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\Rooms.cshtml.g.cs
+C:\Users\jan\Source\Repos\2019p2prg-adventure-rpg-game-palfi-reisiegel\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\GuessNumber.cshtml.g.cs
+C:\Users\jan\Source\Repos\2019p2prg-adventure-rpg-game-palfi-reisiegel\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\Wins.cshtml.g.cs
+C:\Users\jan\source\repos\2019p2prg-adventure-rpg-game-palfi-reisiegel\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\RPS.cshtml.g.cs

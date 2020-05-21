@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Adventure.Models;
 using Adventure.Services;
+using Adventure.Services.SideGamesServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -32,6 +33,8 @@ namespace Adventure
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IEveryArea, EveryArea>();
             services.AddScoped<GameService>();
+            services.AddScoped<NumberService>();
+            services.AddScoped<RPSService>();
             services.AddRazorPages();
         }
 
