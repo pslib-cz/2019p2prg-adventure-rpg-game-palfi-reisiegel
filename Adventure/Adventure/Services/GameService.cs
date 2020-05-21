@@ -48,8 +48,17 @@ namespace Adventure.Services
         {
             if (State.Location == Areas.DeathRoom)
             {
-                State.HP -= 4;
+                State.HP -= 20;
             }
+            if (State.Location == Areas.Tower)
+            {
+                State.HP = 0;
+            }
+            if (State.Location == Areas.DiningRoom)
+            {
+                State.HP += 10;
+            }
+            
             if(State.HP <= 0)
             {
                 State.Location = YOUR_END;
