@@ -1,5 +1,6 @@
 ﻿using Adventure.Models.SideGamesData;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,9 @@ using System.Threading.Tasks;
 namespace Adventure.Services.SideGamesServices
 {
     public class RPSService
-    {       
+    {
+-
+        
         public void RPSGame(RPSEnum player, RPSEnum computer, int wins, int lose)
         { 
             if (player != computer)
@@ -19,11 +22,18 @@ namespace Adventure.Services.SideGamesServices
                     (player == RPSEnum.Paper && computer == RPSEnum.Rock)
                    )
                 {
-                    wins++;
+                    wins++;//it doesn't work why?
                 }
-                else
+
+                if (
+                   (player != RPSEnum.Rock && computer != RPSEnum.Scissors) ||
+                   (player != RPSEnum.Scissors && computer != RPSEnum.Paper) ||
+                   (player != RPSEnum.Paper && computer != RPSEnum.Rock)
+                  )
                 {
-                    lose++;
+
+                    
+                    lose++;//
                 }
             }
             if (wins == 3)
@@ -33,6 +43,7 @@ namespace Adventure.Services.SideGamesServices
             if(lose == 3)
             {
                 //won = false;
+                //Where is mistake?       
             }
         }
     }

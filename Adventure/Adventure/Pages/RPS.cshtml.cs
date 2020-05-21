@@ -31,7 +31,8 @@ namespace Adventure.Pages
             if (ModelState.IsValid)
             {
                 Data.Computer = (RPSEnum)_random.Next(1, 4);
-                _sv.RPSGame(Data.Player, Data.Computer, Data.Wins, Data.Lose);
+                //napiš Data.něco = *zbytek*
+               _sv.RPSGame(Data.Player, Data.Computer, Data.Wins, Data.Lose);
             }
             if (Data.Won == true)
             {
