@@ -10,6 +10,7 @@ namespace Adventure.Models.SideGamesData
         public int Wins { get; set; }
         public int Lose { get; set; }
         public RPSEnum Player { get; set; }
+
         public RPSEnum Computer { get; set; }
         public bool Won { get; set; }
     }

@@ -8,17 +8,9 @@ using System.Threading.Tasks;
 namespace Adventure.Services.SideGamesServices
 {
     public class RPSService
-    {
-        [BindProperty]
-        public RPSData Data { get; set; } = new RPSData();
-        private Random _random;
-        public RPSService()
-        {
-            _random = new Random();
-        }
-        public void RPSGame(RPSEnum player, RPSEnum computer)
-        {
-            computer = (RPSEnum)_random.Next(1, 4);
+    {       
+        public void RPSGame(RPSEnum player, RPSEnum computer, int wins, int lose)
+        { 
             if (player != computer)
             {
                 if (
@@ -27,20 +19,20 @@ namespace Adventure.Services.SideGamesServices
                     (player == RPSEnum.Paper && computer == RPSEnum.Rock)
                    )
                 {
-                    Data.Wins++;
+                    wins++;
                 }
                 else
                 {
-                    Data.Lose++;
+                    lose++;
                 }
             }
-            if (Data.Wins == 3)
+            if (wins == 3)
             {
-                Data.Won = true;
+                //won = true;
             }
-            if(Data.Lose == 3)
+            if(lose == 3)
             {
-                Data.Won = false;
+                //won = false;
             }
         }
     }

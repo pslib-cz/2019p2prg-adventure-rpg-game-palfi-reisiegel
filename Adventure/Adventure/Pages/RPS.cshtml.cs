@@ -13,9 +13,12 @@ namespace Adventure.Pages
     {
         [BindProperty]
         public RPSData Data { get; set; } = new RPSData();
+
         private RPSService _sv;
+        private Random _random;
         public RPSModel(RPSService sv)
         {
+            _random = new Random();
             _sv = sv;
         }
         public void OnGet()
@@ -27,7 +30,8 @@ namespace Adventure.Pages
         {
             if (ModelState.IsValid)
             {
-                _sv.RPSGame(Data.Player, Data.Computer);
+                Data.Computer = (RPSEnum)_random.Next(1, 4);
+                _sv.RPSGame(Data.Player, Data.Computer, Data.Wins, Data.Lose);
             }
             if (Data.Won == true)
             {

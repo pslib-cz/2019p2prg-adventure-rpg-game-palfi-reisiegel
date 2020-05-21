@@ -10,6 +10,7 @@
 
             <p>@Model.Property.Message</p>
             <!---<p>Nacházeč: @Model.Property.Result</p>--->
+            <p>@Model.Property.RandComputerNumber</p>
 
         </div>
         <form method="post">
@@ -23,9 +24,10 @@
             </div>
             <button type="submit" class="btn btn-primary">Vložit</button>
             <div>
+                <!--
                 <div class="alert alert-warning" role="alert">
                     Počet pokusů pro uhádnutí: @Model.Property.Guesses
-                </div>
+                </div>-->
             </div>
         </form>
     </div>

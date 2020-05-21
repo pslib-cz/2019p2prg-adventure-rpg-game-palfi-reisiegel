@@ -10,9 +10,7 @@ namespace Adventure.Models.SideGamesData
     public class NumberData
     {
         [Required]
-        [BindProperty]
         public int PlayerNumber { get; set; }
-        [BindProperty]
         public int RandComputerNumber { get; set; }
 
         public string Message { get; set; }
