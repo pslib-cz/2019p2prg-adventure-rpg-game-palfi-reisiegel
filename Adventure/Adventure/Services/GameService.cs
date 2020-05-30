@@ -47,7 +47,7 @@ namespace Adventure.Services
                 State.HP -= 20;
                 
             }
-            if (State.Location == Areas.Cellar)
+            if (State.Location == Areas.Falling)
             {
                 State.HP -= 30;
             }

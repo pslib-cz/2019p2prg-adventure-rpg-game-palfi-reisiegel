@@ -458,3 +458,6 @@ C:\Users\Vlastik\source\repos\Very Very Adventure\Adventure\Adventure\obj\Debug\
 C:\Users\Vlastik\source\repos\Very Very Adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.dll
 C:\Users\Vlastik\source\repos\Very Very Adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.pdb
 C:\Users\Vlastik\source\repos\Very Very Adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Adventure.genruntimeconfig.cache
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\GuessNumber.cshtml.g.cs
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\RPS.cshtml.g.cs
+D:\Škola\Github\PRG\C# asp.net\Very adventure\Adventure\Adventure\obj\Debug\netcoreapp3.1\Razor\Pages\Wins.cshtml.g.cs

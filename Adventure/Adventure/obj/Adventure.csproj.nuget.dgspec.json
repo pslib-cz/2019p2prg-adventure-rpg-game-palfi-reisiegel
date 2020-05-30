@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\Adventure.csproj": {}
+    "D:\\Škola\\Github\\PRG\\C# asp.net\\Very adventure\\Adventure\\Adventure\\Adventure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\Adventure.csproj": {
+    "D:\\Škola\\Github\\PRG\\C# asp.net\\Very adventure\\Adventure\\Adventure\\Adventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\Adventure.csproj",
+        "projectUniqueName": "D:\\Škola\\Github\\PRG\\C# asp.net\\Very adventure\\Adventure\\Adventure\\Adventure.csproj",
         "projectName": "Adventure",
-        "projectPath": "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\Adventure.csproj",
-        "packagesPath": "C:\\Users\\jan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jan\\Source\\Repos\\2019p2prg-adventure-rpg-game-palfi-reisiegel\\Adventure\\Adventure\\obj\\",
+        "projectPath": "D:\\Škola\\Github\\PRG\\C# asp.net\\Very adventure\\Adventure\\Adventure\\Adventure.csproj",
+        "packagesPath": "C:\\Users\\Vlastik\\.nuget\\packages\\",
+        "outputPath": "D:\\Škola\\Github\\PRG\\C# asp.net\\Very adventure\\Adventure\\Adventure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vlastik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

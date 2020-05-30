@@ -11,7 +11,7 @@
     <div class="col">
         <div>
             <h1 class="text-center">@Model.Location.Title</h1>
-            <p class="text-justify">@Model.Location.Description</p>
+            <p class="text-justify">@Html.Raw(Model.Location.Description.Replace("\r\n", "<br />"))</p>
             <div class="d-flex flex-column">
                     @foreach (var a in Model.Paths)
                     {

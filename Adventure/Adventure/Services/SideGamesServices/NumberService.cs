@@ -15,11 +15,11 @@ namespace Adventure.Services.SideGamesServices
         {
             if (number < random)
             {
-                return NumberEnum.IsLower;
+                return NumberEnum.IsGreater;
             }
             if (number > random)
             {
-                return NumberEnum.IsGreater;
+                return NumberEnum.IsLower;
 
             }
             if (number == random)

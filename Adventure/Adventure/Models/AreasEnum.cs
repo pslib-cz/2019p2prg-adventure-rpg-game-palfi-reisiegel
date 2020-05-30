@@ -38,6 +38,7 @@ namespace Adventure.Models
         King,
         TheNormalEnd,
 
+        Falling,
         Cellar,
         Cell,
         Skeleton,
